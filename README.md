@@ -16,9 +16,10 @@ $ git clone https://github.com/mohamedsamara/React-GraphQL-App.git
 $ cd project
 
 1. Client part: `cd client`
-   Run `npm start` for development <br />
-   Run `npm run build` for production <br />
-1. Backend part: `cd server`
+   Run `npm start` for development
+   Run `npm run build` for production
+
+2. Backend part: `cd server`
    Run `npm install` to install dependencies  
 
 ```
@@ -31,6 +32,7 @@ npm start
 
 1. Backend
 
+
 - [Node](https://nodejs.org/en/)
 
 - [Express](https://expressjs.com/)
@@ -38,7 +40,8 @@ npm start
 - [Mongoose](https://mongoosejs.com/)
 
 
-1. Client 
+2. Client
+
 
 - [React](https://reactjs.org/)
 

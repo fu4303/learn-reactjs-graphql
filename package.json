@@ -1,0 +1,31 @@
+{
+  "name": "react-graphql-app",
+  "version": "1.0.0",
+  "description": "React GraphQL Application",
+  "main": "index.js",
+  "scripts": {
+    "development": "node nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedsamara/React-GraphQL-App.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongoose"
+  ],
+  "author": "Mohamed Samara (https://github.com/mohamedsamara)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamedsamara/React-GraphQL-App/issues"
+  },
+  "homepage": "https://github.com/mohamedsamara/React-GraphQL-App#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
