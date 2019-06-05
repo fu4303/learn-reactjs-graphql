@@ -2,9 +2,11 @@
   "name": "react-graphql-app",
   "version": "1.0.0",
   "description": "React GraphQL Application",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
-    "development": "node nodemon",
+    "build": "webpack --progress --profile --colors && node nodemon",
+    "client": "webpack-dev-server",
+    "server": "node nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,9 +25,28 @@
   },
   "homepage": "https://github.com/mohamedsamara/React-GraphQL-App#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "dotenv": "^8.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "nodemon": "^1.19.1",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-dev-server": "^3.5.1",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.1"
   }
 }
