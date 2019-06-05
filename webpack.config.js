@@ -1,15 +1,17 @@
-/* eslint-disable */
-
-'use strict';
-
 const common = require('./config/webpack/webpack.common');
 const webpackMerge = require('webpack-merge');
 
-const envs = {
-  development: 'dev',
-  production: 'prod'
-};
+let envConfig;
+switch (process.env.NODE_ENV) {
+  case 'prod':
+  case 'production':
+    envConfig = require('./config/webpack/webpack.prod');
+    break;
 
-const env = envs[process.env.NODE_ENV || 'development'];
-const envConfig = require(`./config/webpack/webpack.${env}.js`);
+  case 'dev':
+  case 'development':
+  default:
+    envConfig = require('./config/webpack/webpack.dev');
+}
+
 module.exports = webpackMerge(common, envConfig);

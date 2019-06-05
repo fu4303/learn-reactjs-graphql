@@ -1,9 +1,6 @@
-/* eslint-disable */
-
-'use strict';
+const path = require('path');
 
 const CURRENT_WORKING_DIR = process.cwd();
-const path = require('path');
 
 module.exports = {
   mode: 'development',
@@ -13,8 +10,17 @@ module.exports = {
     filename: '[name].js'
   },
   devServer: {
+    port: 5000,
+    open: true,
+    inline: true,
+    compress: true,
+    hot: true,
+    disableHostCheck: true,
     historyApiFallback: true,
-    stats: 'minimal'
+    stats: 'minimal',
+    proxy: {
+      '/api': 'http://localhost:5000'
+    }
   },
   devtool: 'eval-source-map'
 };

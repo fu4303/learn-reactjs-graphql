@@ -1,9 +1,5 @@
-/* eslint-disable */
-
-'use strict';
-
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const CURRENT_WORKING_DIR = process.cwd();
 
@@ -15,14 +11,16 @@ module.exports = {
     chunkFilename: 'js/[name].[chunkhash].js'
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new UglifyJsPlugin({
         parallel: true,
         extractComments: true,
+        sourceMap: false,
+        cache: true,
+        parallel: true,
         uglifyOptions: {
-          warnings: false,
-          parse: {},
-          compress: {},
+          compress: true,
           mangle: true,
           output: null,
           toplevel: false,
