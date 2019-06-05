@@ -14,24 +14,21 @@ Some basic Git commands are:
 ```
 $ git clone https://github.com/mohamedsamara/React-GraphQL-App.git
 $ cd project
-
-1. Client part: `cd client`
-   Run `npm start` for development
-   Run `npm run build` for production
-
-2. Backend part: `cd server`
-   Run `npm install` to install dependencies  
+$ npm install
 
 ```
 
-## Start
+
+## Run the application for development
 
 npm start
 
+## Run the application for production
+
+npm run start:production
+
+
 ## Languages & tools
-
-1. Backend
-
 
 - [Node](https://nodejs.org/en/)
 
@@ -39,10 +36,7 @@ npm start
 
 - [Mongoose](https://mongoosejs.com/)
 
-
-2. Client
-
+- [Webpack](https://webpack.js.org/)
 
 - [React](https://reactjs.org/)
 
-- [Webpack](https://webpack.js.org/)
