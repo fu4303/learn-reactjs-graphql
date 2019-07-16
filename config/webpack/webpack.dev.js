@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const CURRENT_WORKING_DIR = process.cwd();
 
@@ -10,6 +11,13 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(CURRENT_WORKING_DIR, 'client/public/index.html'),
+      inject: true
+    })
+  ],
   devServer: {
     port: 5000,
     open: true,
@@ -23,5 +31,6 @@ module.exports = {
       '/api': 'http://localhost:5000'
     }
   },
+
   devtool: 'eval-source-map'
 };
