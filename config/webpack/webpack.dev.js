@@ -11,13 +11,7 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: path.join(CURRENT_WORKING_DIR, 'client/public/index.html'),
-      inject: true
-    })
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     port: 5000,
     open: true,
