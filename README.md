@@ -12,7 +12,7 @@
 Some basic Git commands are:
 
 ```
-$ git clone https://github.com/mohamedsamara/React-GraphQL-App.git
+$ git clone https://github.com/mohamedsamara/react-graphql-app.git
 $ cd project
 $ npm install
 

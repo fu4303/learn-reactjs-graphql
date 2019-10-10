@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohamedsamara/React-GraphQL-App.git"
+    "url": "git+https://github.com/mohamedsamara/react-graphql-app.git"
   },
   "keywords": [
     "node",
@@ -23,9 +23,9 @@
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mohamedsamara/React-GraphQL-App/issues"
+    "url": "https://github.com/mohamedsamara/react-graphql-app/issues"
   },
-  "homepage": "https://github.com/mohamedsamara/React-GraphQL-App#readme",
+  "homepage": "https://github.com/mohamedsamara/react-graphql-app#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "express": "^4.17.1",
