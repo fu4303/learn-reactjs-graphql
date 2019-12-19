@@ -1,19 +1,67 @@
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackPwaManifest = require("webpack-pwa-manifest");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const CURRENT_WORKING_DIR = process.cwd();
 
 module.exports = {
-  mode: 'production',
+  mode: "production",
   output: {
-    path: path.join(CURRENT_WORKING_DIR, '/dist'),
-    filename: 'js/[name].[hash].js',
-    chunkFilename: 'js/[name].[chunkhash].js',
-    publicPath: '/'
+    path: path.join(CURRENT_WORKING_DIR, "/dist"),
+    filename: "js/[name].[hash].js",
+    chunkFilename: "js/[name].[chunkhash].js",
+    publicPath: "/"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(scss|sass|css)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [require("cssnano"), require("autoprefixer")]
+            }
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "images",
+              publicPath: "../images/",
+              name: "[name].[hash].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "fonts",
+              publicPath: "../fonts/",
+              name: "[name].[hash].[ext]"
+            }
+          }
+        ]
+      }
+    ]
   },
   performance: {
     hints: false,
@@ -22,21 +70,21 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    nodeEnv: 'production',
+    nodeEnv: "production",
     sideEffects: true,
     concatenateModules: true,
-    runtimeChunk: 'single',
+    runtimeChunk: "single",
     splitChunks: {
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
+          name: "vendors",
+          chunks: "all"
         },
         styles: {
           test: /\.css$/,
-          name: 'styles',
-          chunks: 'all',
+          name: "styles",
+          chunks: "all",
           enforce: true
         }
       }
@@ -62,7 +110,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(CURRENT_WORKING_DIR, 'client/public/index.html'),
+      template: path.join(CURRENT_WORKING_DIR, "client/public/index.html"),
       inject: true,
       minify: {
         removeComments: true,
@@ -78,35 +126,35 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash].css'
+      filename: "css/[name].[hash].css"
     }),
     new WebpackPwaManifest({
-      name: 'MERN Boilerplate',
-      short_name: 'MERN',
-      description: 'MERN Boilerplate!',
-      background_color: '#fff',
-      theme_color: '#4a68aa',
+      name: "React GraphQL Application",
+      short_name: "ReactGraphQLApplication",
+      description: "React GraphQL Application!",
+      background_color: "#fff",
+      theme_color: "#4a68aa",
       inject: true,
       ios: true,
       icons: [
         {
-          src: path.resolve('client/public/images/icon-512x512.png'),
-          destination: 'images',
+          src: path.resolve("client/public/images/icon-256x256.ico"),
+          destination: "images",
           sizes: [72, 96, 128, 144, 192, 384, 512]
         },
         {
-          src: path.resolve('client/public/images/icon-512x512.png'),
+          src: path.resolve("client/public/images/icon-256x256.ico"),
           sizes: [120, 152, 167, 180],
-          destination: 'images',
+          destination: "images",
           ios: true
         }
       ]
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
-      cssProcessor: require('cssnano'),
+      cssProcessor: require("cssnano"),
       cssProcessorPluginOptions: {
-        preset: ['default', { discardComments: { removeAll: true } }]
+        preset: ["default", { discardComments: { removeAll: true } }]
       },
       canPrint: true
     })

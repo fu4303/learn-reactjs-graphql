@@ -40,10 +40,6 @@ body {
 
 .wrapper {
   padding: 60px 0px;
-
-  @include media-breakpoint-down(sm) {
-    padding: 200px 0px;
-  }
 }
 
 img {
