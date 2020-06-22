@@ -21,28 +21,33 @@
     "mongoose"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mohamedsamara/react-graphql-app/issues"
   },
   "homepage": "https://github.com/mohamedsamara/react-graphql-app#readme",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "express": "^4.17.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.3",
     "cross-env": "^5.2.0",
     "css-loader": "^3.0.0",
     "cssnano": "^4.1.10",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-compat": "^3.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.7.0",
@@ -54,7 +59,6 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.3.0",
-    "uglifyjs-webpack-plugin": "^2.1.3",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-middleware": "^3.7.0",
@@ -62,5 +66,11 @@
     "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.1",
     "webpack-pwa-manifest": "^4.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

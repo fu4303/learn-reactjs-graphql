@@ -18,14 +18,26 @@ $ npm install
 
 ```
 
+## Simple build for production
+
+```
+$ npm run production
+
+```
 
 ## Run the application for development
 
-npm start
+```
+$ npm start
+
+```
 
 ## Run the application for production
 
-npm run start:production
+```
+$ npm run start:production
+
+```
 
 
 ## Languages & tools
