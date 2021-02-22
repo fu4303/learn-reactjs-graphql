@@ -1,14 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const common = require('./webpack.common');
 
 const CURRENT_WORKING_DIR = process.cwd();
 
-module.exports = {
+module.exports = merge(common, {
   mode: 'development',
-  entry: ['webpack-hot-middleware/client?reload=true'],
   output: {
-    path: path.join(CURRENT_WORKING_DIR, '/dist'),
+    path: path.join(CURRENT_WORKING_DIR, '/dist/client'),
     filename: '[name].js',
     publicPath: '/'
   },
@@ -66,7 +68,7 @@ module.exports = {
     })
   ],
   devServer: {
-    port: 5000,
+    port: 3000,
     open: true,
     inline: true,
     compress: true,
@@ -75,8 +77,8 @@ module.exports = {
     disableHostCheck: false,
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:5000'
+      '/api': 'http://localhost:4000'
     }
   },
   devtool: 'eval-source-map'
-};
+});
