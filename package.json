@@ -12,6 +12,8 @@
     "build:client": "cross-env NODE_ENV=production webpack --mode=production  --config config/webpack/webpack.prod.js --color --progress",
     "build:server": "cross-env NODE_ENV=production babel -d ./dist/server server",
     "build": "npm run clean && npm run build:client && npm run build:server",
+    "lint": "eslint '**/*.{js,jsx}' --ignore-path .eslintignore",
+    "lint:fix": "eslint '**/*.{js,jsx}' --fix --ignore-path .eslintignore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -63,6 +65,7 @@
     "nodemon": "^1.19.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
+    "prettier": "^2.2.1",
     "rimraf": "^2.6.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -77,6 +80,7 @@
     "bootstrap": "^4.3.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.11.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

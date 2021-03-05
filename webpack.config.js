@@ -1,5 +1,5 @@
-const common = require('./config/webpack/webpack.common');
 const webpackMerge = require('webpack-merge');
+const common = require('./config/webpack/webpack.common');
 
 let envConfig;
 switch (process.env.NODE_ENV) {

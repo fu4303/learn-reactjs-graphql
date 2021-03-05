@@ -11,29 +11,19 @@
     "es6": true,
     "node": true
   },
-  "plugins": [
-    "prettier",
-    "react",
-    "jsx-a11y",
-    "compat"
-  ],
+  "plugins": ["prettier", "react", "jsx-a11y", "compat"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": [
-      "error"
-    ],
+    "prettier/prettier": ["error"],
     "compat/compat": "warn",
     "indent": 0,
     "no-console": 0,
     "no-tabs": 0,
-    "eol-last": [
-      "error",
-      "always"
-    ],
+    "eol-last": ["error", "always"],
     "max-len": 0,
     "newline-per-chained-call": 0,
     "no-confusing-arrow": 0,
@@ -68,9 +58,7 @@
     "jsx-a11y/label-has-associated-control": [
       2,
       {
-        "controlComponents": [
-          "Input"
-        ]
+        "controlComponents": ["Input"]
       }
     ],
     "react/jsx-wrap-multilines": "off",
@@ -78,19 +66,13 @@
     "react/jsx-indent-props": 0,
     "react/jsx-props-no-spreading": 0,
     "react/jsx-closing-tag-location": 0,
-    "react/jsx-first-prop-new-line": [
-      2,
-      "multiline"
-    ],
+    "react/jsx-first-prop-new-line": [2, "multiline"],
     "react/jsx-no-target-blank": 0,
     "react/jsx-uses-vars": 2,
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [
-          ".jsx",
-          ".tsx"
-        ]
+        "extensions": ["js", ".jsx", ".tsx"]
       }
     ],
     "react/forbid-prop-types": 0,
