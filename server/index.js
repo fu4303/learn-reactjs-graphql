@@ -2,11 +2,22 @@ import 'dotenv/config';
 import path from 'path';
 import express from 'express';
 import mongoose from 'mongoose';
+import { graphqlHTTP } from 'express-graphql';
+
+import schema from './schema';
 
 const PORT = process.env.PORT || 4000;
 const mongoURI = process.env.MONGO_URI;
 
 const app = express();
+
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema,
+    graphiql: true
+  })
+);
 
 // connecting to MongoDB
 (async () => {
