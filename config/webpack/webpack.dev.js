@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
@@ -77,7 +78,7 @@ module.exports = merge(common, {
     disableHostCheck: false,
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:4000'
+      '/graphql': 'http://localhost:4000'
     }
   },
   devtool: 'eval-source-map'
