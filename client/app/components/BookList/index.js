@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 import { getBooksQuery } from '../../queries/book';
 
@@ -10,9 +11,9 @@ const BookList = () => {
   if (error) return <p>Error :(</p>;
 
   return data.books.map(({ id, name }) => (
-    <div key={id}>
-      <p>{name}</p>
-    </div>
+    <Link key={id} to={`/book/edit/${id}`}>
+      {name}
+    </Link>
   ));
 };
 

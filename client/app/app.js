@@ -1,6 +1,9 @@
 import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { Router } from 'react-router-dom';
 
+import history from './history';
+import Routes from './routes';
 import BookList from './components/BookList';
 import Book from './components/Book';
 import AddBook from './components/AddBook';
@@ -13,12 +16,9 @@ const client = new ApolloClient({
 const App = () => {
   return (
     <ApolloProvider client={client}>
-      <div>
-        <h2>My first Apollo app 🚀</h2>
-        <BookList />
-        <Book />
-        <AddBook />
-      </div>
+      <Router history={history}>
+        <Routes />
+      </Router>
     </ApolloProvider>
   );
 };

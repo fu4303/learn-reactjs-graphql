@@ -5,7 +5,7 @@ import { addBookMutation } from '../../mutations/book';
 import AuthorsDropdown from '../AuthorsDropdown';
 
 const AddBook = () => {
-  const [addBook, { data }] = useMutation(addBookMutation);
+  const [addBook] = useMutation(addBookMutation);
 
   const [book, setBook] = useState({
     name: '',

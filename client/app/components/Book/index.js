@@ -1,14 +1,14 @@
 import React from 'react';
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
 
 import { getBookQuery } from '../../queries/book';
 
 const Book = () => {
+  const { id } = useParams();
   const { loading, error, data } = useQuery(getBookQuery, {
-    variables: { id: '604ec89b2e2779e35e23a7be' }
+    variables: { id }
   });
-
-  console.log(data);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
