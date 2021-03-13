@@ -1,0 +1,61 @@
+.books-page {
+  .add-book-link-block {
+    @include flex();
+    justify-content: flex-end;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  .books {
+    display: grid;
+    grid-gap: 10px;
+
+    @media (min-width: 767px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .book-link {
+      text-align: center;
+      width: 100%;
+      padding: 12px;
+      border: $border-default;
+      background-color: $theme-gray;
+
+      .book-name {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.book-page {
+  .back-link-block {
+    @include flex();
+    justify-content: flex-end;
+    text-align: right;
+    margin-bottom: 10px;
+  }
+
+  .book {
+    padding: 12px;
+    border: $border-default;
+    background-color: $theme-gray;
+  }
+}
+
+.add-book-page {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .add-book-actions {
+    .add-book-btn {
+      margin-top: 20px;
+      margin-right: 12px;
+    }
+  }
+}

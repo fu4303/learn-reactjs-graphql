@@ -17,7 +17,11 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <Router history={history}>
-        <Routes />
+        <div className="application">
+          <main>
+            <Routes />
+          </main>
+        </div>
       </Router>
     </ApolloProvider>
   );

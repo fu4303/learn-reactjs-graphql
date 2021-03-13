@@ -1,7 +1,14 @@
 // layout styles
 
-html {
-  overflow: visible;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-y: scroll;
 }
 
 body {
@@ -26,6 +33,7 @@ body {
 
 main {
   flex: 1 0 auto;
+  padding: 12px;
 }
 
 html {
@@ -51,7 +59,7 @@ span,
 label,
 a,
 p {
-  font-size: $font-size-small;
+  font-size: $font-size-medium;
 }
 
 label {
@@ -64,16 +72,16 @@ a {
   text-decoration: none !important;
 
   &:hover {
-    color: $font-hover-color !important;
+    // color: $font-hover-color !important;
     -moz-transition: color $layout-transition-speed ease-in-out;
     -webkit-transition: color $layout-transition-speed ease-in-out;
     -ms-transition: color $layout-transition-speed ease-in-out;
     transition: color $layout-transition-speed ease-in-out;
   }
 
-  &:focus {
-    outline: none;
-  }
+  // &:focus {
+  //   outline: none;
+  // }
 }
 
 h1,

@@ -10,11 +10,22 @@ const BookList = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return data.books.map(({ id, name }) => (
-    <Link key={id} to={`/book/edit/${id}`}>
-      {name}
-    </Link>
-  ));
+  return (
+    <div className="books-page">
+      <div className="add-book-link-block">
+        <Link to="/book/add" className="btn-link">
+          Add Book
+        </Link>
+      </div>
+      <div className="books">
+        {data.books.map(({ id, name }) => (
+          <Link key={id} to={`/book/edit/${id}`} className="book-link">
+            <h4 className="book-name">{name}</h4>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default BookList;

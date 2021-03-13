@@ -1,1 +1,51 @@
 // utils styles
+
+.btn-link {
+  padding: 10px;
+  border: $border-default;
+
+  &:hover {
+    background-color: $theme-gray;
+  }
+}
+
+input[type='text'] {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  border: $border-default;
+  border-radius: $border-radius-default;
+}
+
+.field {
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5em 1rem;
+  border: $border-default;
+  border-radius: $border-radius-default;
+}
+
+select {
+  border: none;
+  margin: 0;
+  display: block;
+  width: 100%;
+  border: $border-default;
+  border: $border-default;
+  border-radius: $border-radius-default;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+select,
+button {
+  font-size: $font-size-large;
+  line-height: 26px;
+}

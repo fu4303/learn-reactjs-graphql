@@ -20,7 +20,7 @@ const AuthorsDropdown = (props) => {
   };
 
   return (
-    <select id="author" onChange={props.onChange}>
+    <select id="author" onChange={props.onChange} name="authorId">
       <option>Select author</option>
       {renderDropdown()}
     </select>
