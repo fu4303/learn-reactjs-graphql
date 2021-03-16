@@ -23,7 +23,10 @@
   "keywords": [
     "node",
     "express",
-    "mongoose"
+    "mongoose",
+    "graphql",
+    "react",
+    "apollo"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "MIT",

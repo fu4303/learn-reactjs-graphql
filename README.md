@@ -1,12 +1,5 @@
 # React GraphQL App
 
-* features:
-  * Node provides the backend environment for this application
-  * Express middleware is used to handle requests, routes and views
-  * Mongoose schemas to model the application data
-  * React for displaying UI components
-
-
 ## Install
 
 Some basic Git commands are:
@@ -15,28 +8,24 @@ Some basic Git commands are:
 $ git clone https://github.com/mohamedsamara/react-graphql-app.git
 $ cd project
 $ npm install
-
 ```
 
 ## Simple build for production
 
 ```
-$ npm run production
-
+$ npm run build
 ```
 
 ## Run the application for development
 
 ```
-$ npm start
-
+$ npm run dev
 ```
 
 ## Run the application for production
 
 ```
-$ npm run start:production
-
+$ npm start
 ```
 
 
@@ -48,7 +37,12 @@ $ npm run start:production
 
 - [Mongoose](https://mongoosejs.com/)
 
-- [Webpack](https://webpack.js.org/)
+- [GraphQL](https://graphql.org/)
 
 - [React](https://reactjs.org/)
+
+- [Apollo](https://www.apollographql.com/)
+
+
+
 
